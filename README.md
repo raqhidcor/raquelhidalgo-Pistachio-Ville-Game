@@ -1,1 +1,1 @@
-![start screen copy 2](https://user-images.githubusercontent.com/90280742/139528415-d8acf6aa-b8a8-4b5a-b25d-c315fba34d0b.png)
+![start screen read me](https://user-images.githubusercontent.com/90280742/139528457-8ca633fa-4ac6-40da-8e89-3b4c89427725.png)
