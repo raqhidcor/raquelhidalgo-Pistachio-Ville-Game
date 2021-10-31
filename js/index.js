@@ -54,6 +54,8 @@ class Background{
 
      const player = new Player()
 
+     console.log (player)
+
 // console.log (player)
 
 //Event Listeners 
@@ -86,6 +88,17 @@ const updatePlayer =()=>{
     player.x += player.speedX
 }
 
+const checkIfInBounds = ()=>{
+    if (player.x > 1049){
+        player.x =1049
+    }
+
+    if(player.x < 22){
+        player.x = 22
+    }
+
+}
+
 // const clearCanvas =()=>{
 //     ctx.clearRect (0,0,900,583)
 // }
@@ -109,6 +122,7 @@ const startGame = ()=>{
         drawBackground()
         drawPlayer ()
         updatePlayer ()
+        checkIfInBounds()
 
     }
     requestAnimationFrame (startGame)
