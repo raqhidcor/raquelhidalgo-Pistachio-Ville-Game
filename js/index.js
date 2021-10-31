@@ -47,17 +47,30 @@ class Background{
      constructor(){
          this.x = 550;
          this.y = 639;
-         
+         this.speedX = 0;
          this.width = 150;
          this.height = 150;
      }}
 
      const player = new Player()
 
-
+// console.log (player)
 
 //Event Listeners 
 
+document.addEventListener('keydown',(event)=>{
+    if (event.key === "ArrowRight"){
+        player.speedX = 3
+    }else if (event.key === "ArrowLeft"){
+        player.speedX= -3
+    }
+})
+
+document.addEventListener ('keyup',(event)=>{
+    if (event.key === "ArrowRight" || event.key === "ArrowLeft"){
+        player.speedX = 0 
+    }
+})
 
 //Functions 
 
@@ -67,6 +80,10 @@ const drawBackground =()=>{
 
 const drawPlayer =()=>{
     ctx.drawImage(loadedImages.player,player.x,player.y,player.width,player.height)
+}
+
+const updatePlayer =()=>{
+    player.x += player.speedX
 }
 
 // const clearCanvas =()=>{
@@ -91,6 +108,7 @@ const startGame = ()=>{
         // updateBackground ()
         drawBackground()
         drawPlayer ()
+        updatePlayer ()
 
     }
     requestAnimationFrame (startGame)
