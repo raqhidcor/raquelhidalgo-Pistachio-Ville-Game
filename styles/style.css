@@ -18,6 +18,18 @@ body {
     font-family: monospace;
     color: rgb(253,210,1);
   }
+
+  .instructions{
+    background-color: rgb(0,67,32);
+    float: center;
+  }
+
+
+  .instructions p{
+    font-size: 20px;
+    font-family: monospace;
+    color: rgb(253,210,1);
+  }
   
   
   body button {
