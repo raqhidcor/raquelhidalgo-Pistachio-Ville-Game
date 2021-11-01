@@ -14,6 +14,7 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
 
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
 const arrayOfPistachios = []
+const arrayOfPeanuts = []
 
 //Funciones ****************
 const loadImages = () => {
@@ -84,10 +85,39 @@ const createPistachios = () => {
 
 }
 
+const updatePeanuts = (arrPeanuts)=>{
+
+    //for para el array de peanuts
+
+    arrPeanuts.forEach((peanut) => {
+
+        peanut.y += peanut.speed
+    })
+
+}
+
+
+const drawPeanuts = ()=>{
+    arrayOfPeanuts.forEach((peanut)=>{
+    ctx.drawImage (peanut.img,peanut.x,peanut.y, peanut.width,peanut.height)
+    })
+}
+
+const createPeanuts = () => {
+
+    let createPeanutsIntervalID = setInterval(()=>{
+        arrayOfPeanuts.push (new Peanut())
+        
+    },1500)
+
+}
+
+
+
 const startGame = () => {
 
     createPistachios()
-    //.........
+    createPeanuts ()
     //.........
     //........
     gameAnimation();
@@ -130,6 +160,18 @@ class Pistachio{
       } 
   }
 
+  class Peanut{
+      constructor(){
+          this.img = new Image ()
+          this.img.src = "../images/peanut.png"
+          this.x = Math.floor(Math.random()*1100)
+          this.y = 0
+          this.speed = 3
+          this.width = 50
+          this.height =70
+      }
+  } 
+
 
 //Game  Este es el loop de mi juego
 const gameAnimation = ()=>{
@@ -147,6 +189,10 @@ const gameAnimation = ()=>{
 
         updatePistachios(arrayOfPistachios)
         drawPistachios()
+
+        updatePeanuts(arrayOfPeanuts)
+        drawPeanuts()
+
     }
     requestAnimationFrame (gameAnimation)
 }
