@@ -9,8 +9,8 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
     {link: "../images/player.png",name:'player'},
     {link:"../images/pistachio.png",name:'pistachio'},
     {link:"../images/peanut.png", name:'peanut'},
-    {link:"../images/gameover .png", name: 'gameover'}
-
+    {link:"../images/gameover .png", name: 'gameover'},
+    // {links:"../images/recetapistachio.png",name:'receta'}
   ]
 
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
@@ -169,13 +169,13 @@ const drawScore = ()=>{
 }
 
 
-const easterEgg =()=>{
-    if(score === 20){
-        
-    }
-}
+// const easterEgg =()=>{
+//     if(score === 20){
+//         ctx.drawImage(loadedImages.receta,250,80,730,515)
+//     }
+// }
 //Musica 
-let soundTrack = new Audio("/music/006 - Prologue - Welcome to Our Village!.mp3");
+let soundTrack = new Audio("/music/3-01 Main Theme - Welcome Horizons.mp3");
 soundTrack.volume = 0.3;
 soundTrack.preload = "auto";
 soundTrack.load();
@@ -274,6 +274,7 @@ const gameAnimation = ()=>{
         deletePeanuts(); 
 
         drawScore();
+        // easterEgg()
 
 
 
@@ -289,6 +290,8 @@ window.onload = () =>{
 
     document.getElementById('start-button').onclick = () =>{
         startGame();
+        soundTrack.play()
+
     //  console.log ("boton clicado ")
     }
     
