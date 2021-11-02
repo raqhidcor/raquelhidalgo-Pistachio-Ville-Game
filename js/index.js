@@ -9,7 +9,7 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
     {link: "../images/player.png",name:'player'},
     {link:"../images/pistachio.png",name:'pistachio'},
     {link:"../images/peanut.png", name:'peanut'},
-    {link:"../images/gameover .png", name: 'gameover'},
+    {link:"../images/gameover.png", name: 'gameover'},
     // {links:"../images/recetapistachio.png",name:'receta'}
   ]
 
