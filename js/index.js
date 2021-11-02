@@ -9,13 +9,16 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
     {link: "../images/player.png",name:'player'},
     {link:"../images/pistachio.png",name:'pistachio'},
     {link:"../images/peanut.png", name:'peanut'},
+    {link:"../images/gameover .png", name: 'gameover'}
 
   ]
 
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
-let arrayOfPistachios = []
+let arrayOfPistachios = [] 
 let arrayOfPeanuts = []
 let score = 0 
+// ctx.font = ('bold 200px fantasy font')
+// ctx.fillStyl = 'green'
 
 
 
@@ -135,6 +138,32 @@ const deletePistachios =()=>{
     })
 }
 
+const endGame = ()=>{
+    clearCanvas()
+    ctx.drawImage(loadedImages.gameover,250,80,730,515)
+    cancelAnimationFrame()
+}
+
+const checkPeanutsCollision = ()=>{
+   arrayOfPeanuts.forEach((peanut)=>{
+        if (peanut.x < player.x + player.width &&
+            peanut.x + peanut.width > player.x &&
+            peanut.y < player.y + player.height &&
+            peanut.height + peanut.y > player.y){
+                peanut.eaten = true 
+                endGame()
+                
+                // console.log ('coincide con peanuts ')
+            }
+})
+}
+
+const deletePeanuts =()=>{
+    arrayOfPeanuts = arrayOfPeanuts.filter((peanut)=>{
+        return !peanut.eaten
+    })
+}
+
 //Musica 
 const soundTrack = new Audio("/music/006 - Prologue - Welcome to Our Village!.mp3");
 soundTrack.volume = 0.3;
@@ -196,6 +225,7 @@ class Pistachio{
      
   class Peanut{
       constructor(){
+          this.eaten = false;
           this.img = new Image ()
           this.img.src = "../images/peanut.png"
           this.x = Math.floor(Math.random()*1100)
@@ -230,6 +260,9 @@ const gameAnimation = ()=>{
         checkPistachiosCollision();
         deletePistachios();
 
+        checkPeanutsCollision();
+        deletePeanuts(); 
+
 
 
     }
@@ -238,7 +271,6 @@ const gameAnimation = ()=>{
 
 //Event listeners
 window.onload = () =>{
-
 
 
     loadImages()
