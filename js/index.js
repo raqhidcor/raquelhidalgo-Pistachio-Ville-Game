@@ -13,8 +13,8 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
   ]
 
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
-const arrayOfPistachios = []
-const arrayOfPeanuts = []
+let arrayOfPistachios = []
+let arrayOfPeanuts = []
 let score = 0 
 
 
@@ -123,19 +123,32 @@ const checkPistachiosCollision = ()=>{
             pistachio.height + pistachio.y > player.y){
                 pistachio.eaten = true 
                 score++
-                console.log (score)
+                document.getElementById('score-counter').innerText = score 
+                // console.log (score)
             }
 })
 }
-        
-    
 
+const deletePistachios =()=>{
+    arrayOfPistachios = arrayOfPistachios.filter((pistachio)=>{
+        return !pistachio.eaten
+    })
+}
+
+//Musica 
+const soundTrack = new Audio("/music/006 - Prologue - Welcome to Our Village!.mp3");
+soundTrack.volume = 0.3;
+soundTrack.preload = "auto";
+soundTrack.load();
 
 
 const startGame = () => {
 
+    
     createPistachios();
     createPeanuts ();
+
+    
 
     gameAnimation();
 }
@@ -215,6 +228,7 @@ const gameAnimation = ()=>{
         drawPeanuts();
 
         checkPistachiosCollision();
+        deletePistachios();
 
 
 
@@ -225,11 +239,13 @@ const gameAnimation = ()=>{
 //Event listeners
 window.onload = () =>{
 
+
+
     loadImages()
 
     document.getElementById('start-button').onclick = () =>{
-      
-       startGame()
+        startGame();
+        // soundTrack.play()
     //  console.log ("boton clicado ")
     }
 
