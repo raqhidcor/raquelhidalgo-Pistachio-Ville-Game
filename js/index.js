@@ -15,6 +15,9 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
 const arrayOfPistachios = []
 const arrayOfPeanuts = []
+let score = 0 
+
+
 
 //Funciones ****************
 const loadImages = () => {
@@ -112,14 +115,28 @@ const createPeanuts = () => {
 
 }
 
+const checkPistachiosCollision = ()=>{
+    arrayOfPistachios.forEach((pistachio)=>{
+        if (pistachio.x < player.x + player.width &&
+            pistachio.x + pistachio.width > player.x &&
+            pistachio.y < player.y + player.height &&
+            pistachio.height + pistachio.y > player.y){
+                pistachio.eaten = true 
+                score++
+                console.log (score)
+            }
+})
+}
+        
+    
+
 
 
 const startGame = () => {
 
-    createPistachios()
-    createPeanuts ()
-    //.........
-    //........
+    createPistachios();
+    createPeanuts ();
+
     gameAnimation();
 }
 
@@ -150,16 +167,20 @@ class Background{
 
 class Pistachio{
       constructor(){
-        this.img = new Image()
-        this.img.src = "../images/pistachio.png"
-        this.x = Math.floor(Math.random() * 1100)
-        this.y = 0
-        this.speed = 3
-        this.width = 50
-        this.height = 70
+        this.eaten = false;
+        this.img = new Image();
+        this.img.src = "../images/pistachio.png";
+        this.x = Math.floor(Math.random() * 1100);
+        this.y = 0;
+        this.speed = 3;
+        this.width = 50;
+        this.height = 70;
       } 
-  }
 
+    }
+
+
+     
   class Peanut{
       constructor(){
           this.img = new Image ()
@@ -177,21 +198,25 @@ class Pistachio{
 const gameAnimation = ()=>{
 
     if(imageLinks.length === counterForLoadedImages){
-        clearCanvas()
+        clearCanvas();
 
-        drawBackground()
+        drawBackground();
 
-        updatePlayer ()
-        drawPlayer ()
-        checkIfInBounds()
+        updatePlayer ();
+        drawPlayer ();
+        checkIfInBounds();
 
         
 
-        updatePistachios(arrayOfPistachios)
-        drawPistachios()
+        updatePistachios(arrayOfPistachios);
+        drawPistachios();
 
-        updatePeanuts(arrayOfPeanuts)
-        drawPeanuts()
+        updatePeanuts(arrayOfPeanuts);
+        drawPeanuts();
+
+        checkPistachiosCollision();
+
+
 
     }
     requestAnimationFrame (gameAnimation)
@@ -203,7 +228,8 @@ window.onload = () =>{
     loadImages()
 
     document.getElementById('start-button').onclick = () =>{
-        startGame()
+      
+       startGame()
     //  console.log ("boton clicado ")
     }
 
