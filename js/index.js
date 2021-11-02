@@ -16,10 +16,7 @@ const imageLinks = [ //Array de objetos con los enlaces (y los nombres para iden
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
 let arrayOfPistachios = [] 
 let arrayOfPeanuts = []
-let score = 0 
-// ctx.font = ('bold 200px fantasy font')
-// ctx.fillStyl = 'green'
-
+let score = 0
 
 
 //Funciones ****************
@@ -126,7 +123,6 @@ const checkPistachiosCollision = ()=>{
             pistachio.height + pistachio.y > player.y){
                 pistachio.eaten = true 
                 score++
-                document.getElementById('score-counter').innerText = score 
                 // console.log (score)
             }
 })
@@ -141,7 +137,9 @@ const deletePistachios =()=>{
 const endGame = ()=>{
     clearCanvas()
     ctx.drawImage(loadedImages.gameover,250,80,730,515)
+    soundTrack.pause()
     cancelAnimationFrame()
+    
 }
 
 const checkPeanutsCollision = ()=>{
@@ -164,8 +162,20 @@ const deletePeanuts =()=>{
     })
 }
 
+const drawScore = ()=>{
+    ctx.font = "35px monospace";
+    ctx.fillStyle = "white";
+    ctx.fillText("Score: "+score, 20,30);
+}
+
+
+const easterEgg =()=>{
+    if(score === 20){
+        
+    }
+}
 //Musica 
-const soundTrack = new Audio("/music/006 - Prologue - Welcome to Our Village!.mp3");
+let soundTrack = new Audio("/music/006 - Prologue - Welcome to Our Village!.mp3");
 soundTrack.volume = 0.3;
 soundTrack.preload = "auto";
 soundTrack.load();
@@ -263,6 +273,8 @@ const gameAnimation = ()=>{
         checkPeanutsCollision();
         deletePeanuts(); 
 
+        drawScore();
+
 
 
     }
@@ -277,8 +289,15 @@ window.onload = () =>{
 
     document.getElementById('start-button').onclick = () =>{
         startGame();
-        // soundTrack.play()
     //  console.log ("boton clicado ")
+    }
+    
+    document.getElementById('sound-button-on').onclick =()=>{
+        soundTrack.play()
+    }
+
+    document.getElementById('sound-button-off').onclick =()=>{
+        soundTrack.pause()
     }
 
     document.addEventListener('keydown',(event)=>{
