@@ -224,7 +224,7 @@ class Pistachio{
       constructor(){
         this.eaten = false;
         this.img = new Image();
-        this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/pistachio.png";
+        this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Pistachio.png";
         this.x = Math.floor(Math.random() * 1100);
         this.y = 0;
         this.speed = 3;
@@ -240,7 +240,7 @@ class Pistachio{
       constructor(){
           this.eaten = false;
           this.img = new Image ()
-          this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/peanut.png"
+          this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Peanut.png"
           this.x = Math.floor(Math.random()*1100)
           this.y = 0
           this.speed = 3
