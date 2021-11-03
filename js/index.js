@@ -1,17 +1,21 @@
 
+
+//https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/
+
 //Variables ****************
 const canvas = document.getElementById('canvas')
 const ctx = canvas.getContext('2d')
 
 const loadedImages = {}
 const imageLinks = [ //Array de objetos con los enlaces (y los nombres para identificarlos) de todas mis imagenes
-    {link: "../images/background.png",name:'background'},
-    {link: "../images/player.png",name:'player'},
-    {link:"../images/pistachio.png",name:'pistachio'},
-    {link:"../images/peanut.png", name:'peanut'},
-    {link:"../images/gameover.png", name: 'gameover'},
+    {link: "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/background.png",name:'background'},
+    {link: "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/player.png",name:'player'},
+    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/pistachio.png",name:'pistachio'},
+    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/peanut.png", name:'peanut'},
+    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/gameover.png", name: 'gameover'},
     // {links:"../images/recetapistachio.png",name:'receta'}
   ]
+
 
 let counterForLoadedImages = 0; //This counter keeps track of the images loaded
 let arrayOfPistachios = [] 
@@ -174,7 +178,7 @@ const drawScore = ()=>{
 //     }
 // }
 //Musica 
-let soundTrack = new Audio("../music/soundtrack.mp3");
+let soundTrack = new Audio("https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/music/soundtrack.mp3");
 soundTrack.volume = 0.3;
 soundTrack.preload = "auto";
 soundTrack.load();
@@ -220,7 +224,7 @@ class Pistachio{
       constructor(){
         this.eaten = false;
         this.img = new Image();
-        this.img.src = "../images/pistachio.png";
+        this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/pistachio.png";
         this.x = Math.floor(Math.random() * 1100);
         this.y = 0;
         this.speed = 3;
@@ -236,7 +240,7 @@ class Pistachio{
       constructor(){
           this.eaten = false;
           this.img = new Image ()
-          this.img.src = "../images/peanut.png"
+          this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/peanut.png"
           this.x = Math.floor(Math.random()*1100)
           this.y = 0
           this.speed = 3
