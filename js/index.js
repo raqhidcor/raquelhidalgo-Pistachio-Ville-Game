@@ -139,7 +139,6 @@ const endGame = ()=>{
     ctx.drawImage(loadedImages.gameover,250,80,730,515)
     soundTrack.pause()
     cancelAnimationFrame()
-    
 }
 
 const checkPeanutsCollision = ()=>{
@@ -175,7 +174,7 @@ const drawScore = ()=>{
 //     }
 // }
 //Musica 
-let soundTrack = new Audio("/music/3-01 Main Theme - Welcome Horizons.mp3");
+let soundTrack = new Audio("../music/soundtrack.mp3");
 soundTrack.volume = 0.3;
 soundTrack.preload = "auto";
 soundTrack.load();
