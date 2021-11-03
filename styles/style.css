@@ -70,7 +70,7 @@ body {
   #game-board p{
     font-size: 20px;
     font-family: monospace;
-    padding-bottom: 80px;
+    /* padding-bottom: 80px; */
     color: rgb(253,210,1);
     /* margin-right: -1200px; */
   }
