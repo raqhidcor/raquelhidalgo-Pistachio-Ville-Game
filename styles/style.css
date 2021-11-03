@@ -41,7 +41,6 @@ body {
   
   #game-board {
       padding-top: 80px;
-      padding-bottom: 80px;
       float: center;
       background-color: rgb(0,67,32);
   }
@@ -60,10 +59,18 @@ body {
     
   }
 
-  #game-board p {
+  #game-board{
     font-size: 20px;
     font-family: monospace;
+    padding-bottom: 40px;
     color: rgb(253,210,1);
     background-color: rgb(0,67,32);
-    padding-right: 100px;
+  }
+
+  #game-board p{
+    font-size: 20px;
+    font-family: monospace;
+    padding-bottom: 80px;
+    color: rgb(253,210,1);
+    margin-left:1200px;
   }
