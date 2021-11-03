@@ -10,8 +10,8 @@ const loadedImages = {}
 const imageLinks = [ //Array de objetos con los enlaces (y los nombres para identificarlos) de todas mis imagenes
     {link: "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/background.png",name:'background'},
     {link: "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/player.png",name:'player'},
-    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/pistachio.png",name:'pistachio'},
-    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/peanut.png", name:'peanut'},
+    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Pistachio.png",name:'pistachio'},
+    {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Peanut.png", name:'peanut'},
     {link:"https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/gameover.png", name: 'gameover'},
     // {links:"../images/recetapistachio.png",name:'receta'}
   ]
