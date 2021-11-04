@@ -51,8 +51,8 @@ const updatePlayer =()=>{
 }
 
 const checkIfInBounds = ()=>{
-    if (player.x > 1049){
-        player.x =1049
+    if (player.x > 850){
+        player.x = 850
     }
 
     if(player.x < 22){
@@ -140,7 +140,7 @@ const deletePistachios =()=>{
 
 const endGame = ()=>{
     clearCanvas()
-    ctx.drawImage(loadedImages.gameover,250,80,730,515)
+    ctx.drawImage(loadedImages.gameover,130,80,730,515)
     soundTrack.pause()
     cancelAnimationFrame()
 }
@@ -166,7 +166,7 @@ const deletePeanuts =()=>{
 }
 
 const drawScore = ()=>{
-    ctx.font = "35px monospace";
+    ctx.font = "30px monospace";
     ctx.fillStyle = "white";
     ctx.fillText("Score: "+score, 20,30);
 }
@@ -201,8 +201,8 @@ class Background{
     constructor(){
         this.x=0;
         this.y=0;
-        this.width=1200;
-        this.height = 800;
+        this.width=1000;
+        this.height = 640;
     }}
 
     const background = new Background()
@@ -210,11 +210,11 @@ class Background{
 
  class Player{
      constructor(){
-         this.x = 550;
-         this.y = 639;
+         this.x = 450;
+         this.y = 490;
          this.speedX = 0;
-         this.width = 150;
-         this.height = 150;
+         this.width = 130;
+         this.height = 130;
      }}
 
      const player = new Player()
@@ -225,11 +225,11 @@ class Pistachio{
         this.eaten = false;
         this.img = new Image();
         this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Pistachio.png";
-        this.x = Math.floor(Math.random() * 1100);
+        this.x = Math.floor(Math.random() * 900);
         this.y = 0;
         this.speed = 3;
-        this.width = 50;
-        this.height = 70;
+        this.width = 40;
+        this.height = 50;
       } 
 
     }
@@ -241,11 +241,11 @@ class Pistachio{
           this.eaten = false;
           this.img = new Image ()
           this.img.src = "https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/images/Peanut.png"
-          this.x = Math.floor(Math.random()*1100)
+          this.x = Math.floor(Math.random()*900)
           this.y = 0
           this.speed = 3
-          this.width = 50
-          this.height =70
+          this.width = 40
+          this.height =50
       }
   } 
 
