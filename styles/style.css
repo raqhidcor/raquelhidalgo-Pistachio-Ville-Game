@@ -1,102 +1,91 @@
-
-
 body {
-    padding: 0;
-    text-align: center;
-    margin: 0px;
+  padding: 0;
+  text-align: center;
+  margin: 0px;
 }
-  
-  
-  #game-start {
-    background-color: rgb(0,67,32);
-    float: center;
-    padding: 3% 12%;
-  }
-  
-  #game-start p {
-    font-size: 20px;
-    font-family: monospace;
-    color: rgb(253,210,1);
-  }
 
-  .instructions{
-    background-color: rgb(0,67,32);
-    float: center;
-  }
+#game-start {
+  background-color: rgb(0, 67, 32);
+  float: center;
+  padding: 3% 12%;
+}
 
+#game-start p {
+  font-size: 20px;
+  font-family: monospace;
+  color: rgb(253, 210, 1);
+}
 
-  .instructions p{
-    font-size: 20px;
-    font-family: monospace;
-    color: rgb(253,210,1);
-  }
-  
-  
-  body button {
-    background-color:rgb(0,67,32);
-    padding: 5px;
-    border:none;
-  }
+.instructions {
+  background-color: rgb(0, 67, 32);
+  float: center;
+}
 
-  
-  
-  #game-board {
-      padding-top: 10px;
-      float: center;
-      background-color: rgb(0,67,32);
-  }
-  
-  #botones{
-    position: absolute;
-    display: flex; 
-    position: relative;
-      }
+.instructions p {
+  font-size: 20px;
+  font-family: monospace;
+  color: rgb(253, 210, 1);
+}
 
-  #sound-button-on{
-    font-family: monospace;
-    color: rgb(253,210,1);
-    font-size: 20px;
-    border:none;
-    position: relative;
-  }
+body button {
+  background-color: rgb(0, 67, 32);
+  padding: 5px;
+  border: none;
+}
 
-  #sound-button-off{
-    font-family: monospace;
-    color: rgb(253,210,1);
-    font-size: 20px;
-    border:none;
-    position: relative;
-      }
+#game-board {
+  padding-top: 10px;
+  float: center;
+  background-color: rgb(0, 67, 32);
+}
 
-  #game-board{
-    font-size: 20px;
-    font-family: monospace;
-    padding-bottom: 40px;
-    color: rgb(253,210,1);
-    background-color: rgb(0,67,32);
-  }
+#botones {
+  position: absolute;
+  display: flex;
+  position: relative;
+}
 
-  #game-board p{
-    font-size: 20px;
-    font-family: monospace;
-    /* padding-bottom: 80px; */
-    color: rgb(253,210,1);
-    /* margin-right: -1200px; */
-    margin-left: 120px;
-  }
+#sound-button-on {
+  font-family: monospace;
+  color: rgb(253, 210, 1);
+  font-size: 20px;
+  border: none;
+  position: relative;
+}
 
-  .github-logo{
-    float: center;
-    width: auto;
-    height: 100px;
-    list-style: none;
-    /* margin-top: 4px; */
-  }
-  
-  .linkedin-logo{
-    float: center;
-    width: auto;
-    height: 80px;
-    list-style: none;
-    /* margin-top: 4px; */
-  }
+#sound-button-off {
+  font-family: monospace;
+  color: rgb(253, 210, 1);
+  font-size: 20px;
+  border: none;
+  position: relative;
+}
+
+#game-board {
+  font-size: 20px;
+  font-family: monospace;
+  padding-bottom: 40px;
+  color: rgb(253, 210, 1);
+  background-color: rgb(0, 67, 32);
+}
+
+#game-board p {
+  font-size: 20px;
+  font-family: monospace;
+  color: rgb(253, 210, 1);
+  margin-left: 120px;
+}
+
+.github-logo {
+  float: center;
+  width: auto;
+  height: 100px;
+  list-style: none;
+}
+
+.linkedin-logo {
+  float: center;
+  width: auto;
+  height: 80px;
+  list-style: none;
+}
