@@ -17,7 +17,7 @@ Move left and rigth to collect the pistachios and score points.
 
 ## Try it yourself! :computer:
 
-Link: https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/#canvas 
+Link: https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/
 
 
 ## Technologies ⌨️
