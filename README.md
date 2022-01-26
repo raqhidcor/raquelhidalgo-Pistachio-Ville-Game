@@ -30,3 +30,8 @@ Link: https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/
 ## Author✒️
 * **Raquel Hidalgo Corchuelo** - [raqhidcor](https://github.com/raqhidcor)
 
+<div align='center'> 
+
+ <a href="https://www.linkedin.com/in/raquel-hidalgo-corchuelo/" target="_blank"><img src="https://img.shields.io/badge/-LinkedIn-%230077B5?style=for-the-badge&logo=linkedin&logoColor=white" target="_blank"></a>
+  
+</div>
