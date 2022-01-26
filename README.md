@@ -1,7 +1,8 @@
 # Pistachio Ville 
 
 
-https://user-images.githubusercontent.com/90280742/151197322-c16f3a62-3b72-4ff9-8579-123399f9df44.mov
+https://user-images.githubusercontent.com/90280742/151204287-bc75689f-2b13-493e-9511-dc08448c3fc2.mov
+
 
 Pistachio Ville is my first complete deployed project at Ironhack's Web Development bootcamp. I've used Canvas for the game, Vainilla JS for DOM manipulation and CSS3 for the styling. 
 
