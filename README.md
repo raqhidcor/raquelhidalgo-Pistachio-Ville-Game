@@ -1,14 +1,3 @@
-
-
-
-Help Pistachio Cookie to collect all the pistachios but avoid the peanuts, she is allergic to them!
-
-## Instructions 
-
-Move left and rigth to collect the pistachios and add them to the score. 
-
----
-
 # Pistachio Ville 
 
 
@@ -20,6 +9,10 @@ In the game you have to help our character Pistachio Cookie to collect all the p
 
 Pistachio Ville is a game to have fun playing quick matches trying to beat your own record or competing with someone to see who scores the most points. Go try it and have fun!
 
+
+## Instructions 
+
+Move left and rigth to collect the pistachios and score points. 
 
 ## Try it yourself! :computer:
 
