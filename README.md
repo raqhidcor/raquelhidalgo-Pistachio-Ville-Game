@@ -28,7 +28,7 @@ Link: https://raqhidcor.github.io/raquelhidalgo-Pistachio-Ville-Game/
 
 
 ## Author✒️
-* **Raquel Hidalgo Corchuelo** - [raqhidcor](https://github.com/raqhidcor)
+* **Raquel Hidalgo** - [raqhidcor](https://github.com/raqhidcor)
 
 <div align='center'> 
 
